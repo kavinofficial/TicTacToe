@@ -1,0 +1,80 @@
+{
+    "files.autoSave": "off",
+    "todo-tree.highlights.customHighlight": {
+      "TODO": {
+        "icon": "check-circle-fill",
+        "iconColour": "#fff",
+        "type": "tag"
+      },
+      "FIXME": {
+        "foreground": "#fff",
+        "iconColour": "#ff0",
+        "textDecoration": "underline",
+        "icon": "beaker",
+        "type": "tag"
+      },
+      "WARN": {
+        "foreground": "#fff",
+        "background": "#f00",
+        "iconColour": "#f00",
+        "icon": "alert",
+        "type": "line",
+        "fontStyle": "italic"
+      },
+      "REVIEW": {
+        "foreground": "#000",
+        "background": "cyan",
+        "iconColour": "lightblue",
+        "icon": "eye"
+      },
+      "HACK": {
+        "foreground": "#000",
+        "background": "#FFA500",
+        "iconColour": "orange",
+        "icon": "alert-fill"
+      },
+      "REF": {
+        "foreground": "#000",
+        "background": "grey",
+        "iconColour": "grey",
+        "icon": "link",
+        "type": "tag"
+      },
+      "NOTE": {
+        "foreground": "#f00",
+        "background": "#ff0",
+        "icon": "flame"
+      },
+      "STORAGE": {
+        "foreground": "#000",
+        // "background": "#FFA500",
+        "background": "#00fbff",
+        "iconColour": "orange",
+        "icon": "server",
+        "type": "tag"
+      },
+      "UNDONE": {
+        "foreground": "#000",
+        // "background": "#FFA500",
+        "background": "#e20f0f",
+        "iconColour": "orange",
+        "icon": "blocked",
+        "type": "tag"
+      },
+    },
+    "todo-tree.highlights.defaultHighlight": {
+      "type": "text-and-comment",
+      "gutterIcon": true
+    },
+    "todo-tree.general.tags": [
+      "TODO",
+      "FIXME",
+      "REVIEW",
+      "HACK",
+      "REF",
+      "WARN",
+      "NOTE",
+      "STORAGE",
+      "UNDONE"
+    ]
+  }

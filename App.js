@@ -1,46 +1,37 @@
-import { StatusBar } from "expo-status-bar";
-import { Button, Image, StyleSheet, Text, View } from "react-native";
-import Game from "./Components/Game";
-import img from "./assets/xo.png";
-import { useState } from "react";
-export default function App() {
-  const [play, setPlay] = useState(false);
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from "@react-navigation/native";
+import React from "react";
+import Game from "./pages/Game/Game.jsx";
+import Players from "./Components/Players";
+import Home from "./Components/Home";
+import { GameProvider } from "./Components/GameContext";
 
+const Stack = createStackNavigator();
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      {!play ? (
-        <View>
-          <Image source={img} style={styles.img}></Image>
-          <View style={styles.button}>
-            <Button
-              title="Play"
-              onPress={() => setPlay((prev) => !prev)}
-              color={"green"}
-            ></Button>
-          </View>
-          <StatusBar style="auto" />
-        </View>
-      ) : (
-        <Game />
-      )}
-    </View>
+    <GameProvider>
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={{ animationEnabled: false }}>
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Game"
+            component={Game}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Players"
+            component={Players}
+            options={{ headerShown: false }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </GameProvider>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  button: {
-    position: "relative",
-    top: 100,
-    width: 250,
-    borderRadius: 7,
-  },
-  img: {
-    width: 250,
-    height: 250,
-  },
-});
+export default App;
