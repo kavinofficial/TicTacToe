@@ -2,7 +2,7 @@
   "expo": {
     "name": "XO",
     "slug": "XO",
-    "version": "1.1.0",
+    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/xo.png",
     "userInterfaceStyle": "light",
@@ -13,7 +13,8 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "KStudios.xo"
     },
     "android": {
       "adaptiveIcon": {
@@ -29,6 +30,12 @@
       "eas": {
         "projectId": "88d29c53-7396-4886-aa27-a53164bc1f43"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/88d29c53-7396-4886-aa27-a53164bc1f43"
     }
   }
 }
